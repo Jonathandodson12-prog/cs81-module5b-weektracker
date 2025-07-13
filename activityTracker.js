@@ -31,3 +31,13 @@ function averageEnjoymentByTimeOfDay(week, timeOfDay) {
 }
 
 console.log("Average enjoyment in the evening:", averageEnjoymentByTimeOfDay(myWeek, "evening"));
+// Most common category
+function mostCommonCategory(week) {
+  const categories = week.map(entry => entry.category);  // Map categories to an array
+  return categories.reduce((mostCommon, category) => {
+    mostCommon[category] = (mostCommon[category] || 0) + 1; // Count each category
+    return mostCommon;
+  }, {});
+}
+
+console.log("Most common activity category:", mostCommonCategory(myWeek));
