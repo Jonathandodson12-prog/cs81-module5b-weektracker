@@ -41,3 +41,9 @@ function mostCommonCategory(week) {
 }
 
 console.log("Most common activity category:", mostCommonCategory(myWeek));
+// Low-effort, high-enjoyment activities
+function lowEffortHighEnjoyment(week) {
+  return week.filter(entry => entry.hoursSpent < 2 && entry.enjoyment > 7);
+}
+
+console.log("Low-effort, high-enjoyment activities:", lowEffortHighEnjoyment(myWeek));
