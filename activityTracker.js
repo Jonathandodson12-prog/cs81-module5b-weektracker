@@ -23,3 +23,11 @@ function totalPhysicalHours(week) {
 }
 
 console.log("Total hours spent on physical activities:", totalPhysicalHours(myWeek));
+// Average enjoyment by time of day
+function averageEnjoymentByTimeOfDay(week, timeOfDay) {
+  const filteredActivities = week.filter(entry => entry.timeOfDay === timeOfDay);
+  const totalEnjoyment = filteredActivities.reduce((sum, entry) => sum + entry.enjoyment, 0);
+  return totalEnjoyment / filteredActivities.length;
+}
+
+console.log("Average enjoyment in the evening:", averageEnjoymentByTimeOfDay(myWeek, "evening"));
