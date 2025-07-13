@@ -47,3 +47,10 @@ function lowEffortHighEnjoyment(week) {
 }
 
 console.log("Low-effort, high-enjoyment activities:", lowEffortHighEnjoyment(myWeek));
+// Custom higher-order function to filter activities based on a condition
+function filterByCondition(testFn) {
+  return myWeek.filter(testFn);  // Apply the custom condition (testFn)
+}
+
+// Example usage
+console.log("Activities with enjoyment > 8:", filterByCondition(act => act.enjoyment > 8));
